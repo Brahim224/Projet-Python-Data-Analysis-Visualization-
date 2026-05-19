@@ -6,7 +6,7 @@ import seaborn as sns
 df = pd.read_csv("projet_python.csv")  # Pour la lecture du fichier csv; c'est à dire DataSet
 students = pd.DataFrame(df)
 
-'''print('\n                           Description de dataset                                     \n')
+print('\n                           Description de dataset                                     \n')
 
 print("Résumé de la dataset:")
 print(df.info())
@@ -202,13 +202,13 @@ print("The classification of the states based on the average of their schools:")
 state_scores = students.groupby('state')['avg_test_score_percent'].mean()
 state_scores = state_scores.sort_values(ascending=False)
 print(state_scores)
-state_scores.to_csv('schools_Mean.csv')'''
+state_scores.to_csv('schools_Mean.csv')
 
 print('\n                                Visualization Tasks                                 \n')
 
 #-------------------------------------SCATTER---------------------------------#
 # A. Relation entre Financement et Performance, codée par le type d'école
-'''plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 6))
 sns.scatterplot(
     x='funding_per_student_usd',
     y='avg_test_score_percent',
@@ -221,10 +221,10 @@ plt.title("Relation entre Financement par Élève et Score Moyen aux Tests")
 plt.xlabel("Financement par Élève (USD)")
 plt.ylabel("Score Moyen aux Tests (%)")
 plt.grid(axis='y', linestyle='--')
-plt.show()'''
+plt.show()
 
 #-------------------------------------BARPLOT---------------------------------#
-'''data1=df.groupby('school_type')['percent_low_income'].sum()
+data1=df.groupby('school_type')['percent_low_income'].sum()
 plt.bar(data1.index,data1,color='brown',width=0.7)
 
 # Titre
@@ -238,11 +238,11 @@ plt.ylabel('Taux de Faible Revenu (%)',color='green',fontsize=12)
 
 # Grille
 plt.grid(True,color = 'gray',linestyle = '--',linewidth=0.4,alpha=0.8)
-plt.show()'''
+plt.show()
 #-------------------------------------HISTOGRAMME---------------------------------#
 # Histogramme de visualisation du score
 
-'''plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 6))
 plt.hist(
     df['avg_test_score_percent'],
     bins=25,
@@ -253,11 +253,11 @@ plt.title("Distribution du score par Élève",color='skyblue',fontsize=20,fontwe
 plt.xlabel("Score par Élève",fontweight='bold')
 plt.ylabel("Fréquence (Nombre d'Écoles)",fontweight='bold')
 plt.grid(axis='y', linestyle='--', alpha=0.5)
-plt.show()'''
+plt.show()
 
 # 2.1-----------------------------------SCHOOL BOX PLOT--------------------------------------------#
 # 1. Préparation des Données : Créer la liste des listes
-'''types_ecole = df['school_type'].unique()
+types_ecole = df['school_type'].unique()
 listes_scores = []
 for type_level in types_ecole:
     # Ajoute la série des scores pour ce type d'école à la liste principale
@@ -284,10 +284,10 @@ plt.xlabel("Score par ecole",fontweight='bold')
 plt.legend(types_ecole)
 plt.ylabel("Score Moyen aux Tests (%)",fontweight='bold')
 plt.grid(axis='y', alpha=0.5)
-plt.show()'''
+plt.show()
 
 #-------------------------------------PIE PLOT---------------------------------#
-'''school_counts = df['school_type'].value_counts()
+school_counts = df['school_type'].value_counts()
 mycolors = ["gray","yellow","indigo"]
 explode = [0.1,0.1,0.1]
 plt.pie(school_counts,labels=school_counts.index,autopct='%1.1f%%',startangle=90,
@@ -296,7 +296,7 @@ plt.pie(school_counts,labels=school_counts.index,autopct='%1.1f%%',startangle=90
 plt.title("Répartition des types d’écoles",fontsize = 15, fontweight = 'bold')
 plt.legend(title = "Types :")
 plt.tight_layout()
-plt.show()'''
+plt.show()
 
 print('\n                                     OOP Implementation:                                     \n')
 
@@ -316,7 +316,7 @@ class EducationAnalysis:
              print("Data pas charger. Cannot plot.")
              return
          # Relation entre Financement et Performance, codée par le type d'école
-         '''plt.figure(figsize=(10, 6))
+         plt.figure(figsize=(10, 6))
          sns.scatterplot(
              x='funding_per_student_usd',
              y='avg_test_score_percent',
@@ -329,11 +329,11 @@ class EducationAnalysis:
          plt.xlabel("Financement par Élève (USD)")
          plt.ylabel("Score Moyen aux Tests (%)")
          plt.grid(axis='y', linestyle='--')
-         plt.show()'''
+         plt.show()
 
          # Histogramme de visualisation du score
 
-         '''plt.figure(figsize=(10, 6))
+         plt.figure(figsize=(10, 6))
          plt.hist(
              df['avg_test_score_percent'],
              bins=25,
@@ -344,11 +344,11 @@ class EducationAnalysis:
          plt.xlabel("Score par Élève",fontweight='bold')
          plt.ylabel("Fréquence (Nombre d'Écoles)",fontweight='bold')
          plt.grid(axis='y', linestyle='--', alpha=0.5)
-         plt.show()'''
+         plt.show()
 
          # 2.1-----------------------------------SCHOOL--------------------------------------------#
          # 1. Préparation des Données : Créer la liste des listes
-         '''types_ecole = df['school_type'].unique()
+         types_ecole = df['school_type'].unique()
          listes_scores = []
          for type_level in types_ecole:
              # Ajoute la série des scores pour ce type d'école à la liste principale
@@ -375,10 +375,10 @@ class EducationAnalysis:
          plt.legend(types_ecole)
          plt.ylabel("Score Moyen aux Tests (%)",fontweight='bold')
          plt.grid(axis='y', alpha=0.5)
-         plt.show()'''
+         plt.show()
 
          # -------------------------------------PIE PLOT---------------------------------#
-         '''school_counts = df['school_type'].value_counts()
+         school_counts = df['school_type'].value_counts()
          mycolors = ["gray","yellow","indigo"]
          explode = [0.1,0.1,0.1]
          plt.pie(school_counts,labels=school_counts.index,autopct='%1.1f%%',startangle=90,
@@ -387,7 +387,7 @@ class EducationAnalysis:
          plt.title("Répartition des types d’écoles",fontsize = 15, fontweight = 'bold')
          plt.legend(title = "Types :")
          plt.tight_layout()
-         plt.show()'''
+         plt.show()
 
      ##################################analyse load #############################################
     def analyze_data(self):
