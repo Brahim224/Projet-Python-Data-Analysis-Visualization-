@@ -1,6 +1,21 @@
 # 📊 Analyse et Visualisation de Données CSV
 
 Ce projet implémente une application Python structurée en Programmation Orientée Objet (POO) pour nettoyer, analyser et visualiser les données contenues dans un fichier CSV.
+> ⚠️ *Les fichiers sensibles (données internes de l’entreprise) ne sont pas inclus par confidentialité.*
+
+---
+
+## 👥 Auteur
+
+- **Kaba Ibrahima** –
+- ```bash
+   linkedin.com/in/ibrahima-kaba224 
+   ```
+- Encadrement : **Hiba & Maroua**  
+- Institution : **ENSA Kénitra**  
+- Club : **CIELK**
+
+---
 
 ## 🚀 Fonctionnalités
 - **Chargement & Nettoyage** : Importation automatique du fichier CSV avec `pandas` et gestion des valeurs manquantes.
@@ -37,7 +52,15 @@ Placez votre fichier CSV dans le dossier du projet, puis exécutez le script pri
 ```bash
 projet_python.py
 ```
-
 ## 📊 Résultats
 <img width="658" height="449" alt="boxplot avec type d&#39;ecole" src="https://github.com/user-attachments/assets/573edcea-2b40-42dd-a294-26dd93e98dd5" />
 <img width="659" height="428" alt="histogramme des score" src="https://github.com/user-attachments/assets/ab35a689-04b2-406e-81bb-9a3df1c8fce1" />
+
+---
+
+## 📝 Licence
+
+Ce projet est réalisé à des fins académiques. Toute reproduction ou utilisation partielle doit mentionner la source :  
+**© Ibrahima Kaba - ENSA Kénitra – CIELK – 2026**
+
+---
