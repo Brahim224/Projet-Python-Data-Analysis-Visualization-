@@ -12,7 +12,7 @@ Ce projet implémente une application Python structurée en Programmation Orient
 
 1. **Cloner le projet** :
    ```bash
-   git clone <URL_DE_VOTRE_DEPOT_GITHUB>
+   git clone (https://github.com/Brahim224/Projet-Python-Data-Analysis-Visualization-.git)
    ```
 
 2. **Installer les dépendances** :
