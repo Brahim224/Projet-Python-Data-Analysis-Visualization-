@@ -20,6 +20,10 @@ Ce projet implémente une application Python structurée en Programmation Orient
    ```bash
    pip install numpy pandas matplotlib
    ```
+   Lien pour telecharger le fichier csv original :
+   ```bash
+   (https://www.kaggle.com/datasets/shamimhasan8/education-inequality-data)
+   ```
 
 ## 📂 Structure des Fichiers
 - `analyzer.py` : Contient la logique des classes POO (analyse et graphiques), Point d'entrée de l'application (instancie et lance les classes).
